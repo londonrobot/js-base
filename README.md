@@ -1,2 +1,2 @@
-# js-coursework-01
-Курсовая работа по JavaScriot
+# js-base
+Курсовая работа по JavaScriot базовый курс
