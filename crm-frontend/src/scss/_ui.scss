@@ -1,0 +1,39 @@
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  padding: 15px 38px;
+  background-color: #9873FF;
+  max-width: 150px;
+
+  &:hover, &:focus {
+    background-color: #B89EFF;
+  }
+
+  &:active {
+    background-color: #8052FF;
+  }
+
+  &:disabled {
+    background-color: #C8C5D1;
+  }
+}
+
+
+.btn-link {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  text-decoration: underline;
+
+  &:hover, &:focus {
+    color: #9873FF;
+  }
+
+  &:active {
+    color: #9873FF;
+  }
+
+}

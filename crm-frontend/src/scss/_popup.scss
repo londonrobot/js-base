@@ -1,0 +1,302 @@
+.popup {
+
+  &__overlay {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__container {
+    width: 450px;
+    min-height: 400px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+  }
+
+  &__top {
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+  }
+
+  &__id {
+    font-weight: 400;
+    font-size: 12px;
+    color: #B0B0B0;
+  }
+
+  &__close {
+    outline: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease 0s;
+    border-radius: 1vmin;
+    cursor: pointer;
+
+    &:hover {
+      // transform: scale(1.1);
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 21px;
+      height: 1px;
+      background-color: #C8C5D1;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      top: 20px;
+      left: 0;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 20px;
+      left: 0;
+    }
+
+  }
+
+  &__error {
+    display: none;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    color: #F06A4D;
+  }
+
+  &__btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-top: 25px;
+  }
+
+  &__short-form {
+    margin-top: 25px;
+    width: calc(100% + 50px);
+    background-color: #efeef1;
+    height: 35px;
+
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+
+    background-size: 14px;
+    background-position: 32% 50%;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99998 3.66659C6.63331 3.66659 6.33331 3.96659 6.33331 4.33325V6.33325H4.33331C3.96665 6.33325 3.66665 6.63325 3.66665 6.99992C3.66665 7.36659 3.96665 7.66659 4.33331 7.66659H6.33331V9.66659C6.33331 10.0333 6.63331 10.3333 6.99998 10.3333C7.36665 10.3333 7.66665 10.0333 7.66665 9.66659V7.66659H9.66665C10.0333 7.66659 10.3333 7.36659 10.3333 6.99992C10.3333 6.63325 10.0333 6.33325 9.66665 6.33325H7.66665V4.33325C7.66665 3.96659 7.36665 3.66659 6.99998 3.66659ZM6.99998 0.333252C3.31998 0.333252 0.333313 3.31992 0.333313 6.99992C0.333313 10.6799 3.31998 13.6666 6.99998 13.6666C10.68 13.6666 13.6666 10.6799 13.6666 6.99992C13.6666 3.31992 10.68 0.333252 6.99998 0.333252ZM6.99998 12.3333C4.05998 12.3333 1.66665 9.93992 1.66665 6.99992C1.66665 4.05992 4.05998 1.66659 6.99998 1.66659C9.93998 1.66659 12.3333 4.05992 12.3333 6.99992C12.3333 9.93992 9.93998 12.3333 6.99998 12.3333Z' fill='%239873FF' /%3E%3C/svg%3E");
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+#delete-client {
+  .popup {
+    &__container {
+      min-height: 215px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__description {
+      margin: 18px 0 25px;
+      max-width: 275px;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      color: black;
+    }
+  }
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  input {
+    padding-bottom: 4px;
+    padding-top: 10px;
+    border-bottom: 1px solid #C8C5D1;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+#new-client {
+  input {
+    margin-top: 32px;
+  }
+}
+
+#edit-client {
+  input {
+    margin-bottom: 15px;
+  }
+
+  label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    color: #B0B0B0;
+  }
+}
+
+
+.popup-slide {
+  // display: none;
+  display: block;
+}
+
+.popup-slide.is-open {
+  display: block;
+}
+
+.popup {
+  will-change: opacity;
+}
+
+.short {
+  display: none;
+
+  &__block {
+    margin-top: 25px;
+    width: calc(100% + 50px);
+    background-color: #efeef1;
+    padding: 25px;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__select {
+    margin: 0;
+    min-width: 120px;
+    height: 37px;
+    padding: 10px 12px;
+
+    border: 1px solid #C8C5D1;
+    background: #e7e5eb;
+  }
+
+  &__input {
+    margin: 0 !important;
+    width: 100%;
+    height: 37px;
+
+    padding: 8px 12px;
+    border-top: 1px solid #C8C5D1;
+    border-bottom: 1px solid #C8C5D1;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      color: #B0B0B0;
+    }
+  }
+
+  &__close {
+    height: 37px;
+    min-width: 28px;
+    border: 1px solid #C8C5D1;
+    background: #e7e5eb;
+
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0C2.682 0 0 2.682 0 6C0 9.318 2.682 12 6 12C9.318 12 12 9.318 12 6C12 2.682 9.318 0 6 0ZM6 10.8C3.354 10.8 1.2 8.646 1.2 6C1.2 3.354 3.354 1.2 6 1.2C8.646 1.2 10.8 3.354 10.8 6C10.8 8.646 8.646 10.8 6 10.8ZM8.154 3L6 5.154L3.846 3L3 3.846L5.154 6L3 8.154L3.846 9L6 6.846L8.154 9L9 8.154L6.846 6L9 3.846L8.154 3Z' fill='%23B0B0B0' /%3E%3C/svg%3E");
+  }
+
+  .popup-short-form {
+    width: 100%;
+    background-position: 30% 50%;
+  }
+}
+
+// .transparent {
+//   opacity: 0;
+//   animation: fadeOut 500ms ease-in-out;
+// }
+
+// .visible {
+//   animation: fadeIn 500ms ease-in-out;
+//   opacity: 1;
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes fadeOut {
+//   from {
+//     opacity: 1;
+//   }
+
+//   to {
+//     opacity: 0;
+//   }
+// }
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<script type="module" src="./src/js/main.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1 class="visually-hidden">CRM SkillBus</h1>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__logo">skb.</a>
+        <div class="header__input-container">
+          <input type="text" class="header__search" id="search-input" placeholder="Введите запрос">
+          <div class="header__autocomplete autocomplete"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h2 class="main__header">Клиенты</h2>
+        <div class="main__table table">
+          <div id="header-table" class="table__row table__row--header">
+            <button class="table-header table__header-id sort-id-btn" data-sort="id">
+              <span class="table__id">ID</span>
+              <div class="table-sort table__id-sort header-id direct"></div>
+            </button>
+            <button class="table-header table__header-name sort-name-btn" data-sort="fullname">
+              <span class="table__header-desc table__name">Фамилия Имя Отчество</span>
+              <div class="table-sort direct header-name">
+              </div>
+              <div class="table__name-sort direct name-sorting">
+                <span class="table__name-sort-letters">А</span>
+                <span class="table__name-sort-letters">-</span>
+                <span class="table__name-sort-letters">Я</span>
+              </div>
+            </button>
+            <button class="table-header table__header-date sort-createdAt-btn" data-sort="createdAt">
+              <span class="table__header-desc table__date">Дата и время<br>создания</span>
+              <div class="table-sort direct table__date-sort header-date"></div>
+            </button>
+            <button class="table-header table__header-changes sort-updatedAt-btn" data-sort="updatedAt">
+              <span class="table__header-desc table__changes">Последние<br>изменения</span>
+              <div class="table-sort direct table__changes-sort header-changes"></div>
+            </button>
+            <div class="table-header table__header-desc table__header-contacts">Контакты</div>
+            <div class="table-header table__header-desc table__header-actions">Действия</div>
+          </div>
+          <div id="main-table"></div>
+        </div>
+        <button id="client-add-btn" class="main__btn">Добавить клиента</button>
+      </div>
+    </main>
+	</div>
+
+</body>
+</html>
